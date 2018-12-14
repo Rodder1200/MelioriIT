@@ -61,7 +61,7 @@ gulp.task("js", function() {
 
 /* ------------ Delete ------------- */
 gulp.task("clean", function() {
-  return del(["build"]);
+  return del(["docs"]);
 });
 
 /* ------------ Copy fonts ------------- */
@@ -71,31 +71,33 @@ gulp.task("copy:fonts", function() {
 
 /* ------------ Copy images ------------- */
 gulp.task("copy:images", function() {
-  return gulp
-    .src("./src/imgs/**/*.*")
-    .pipe(
-      cache(
-        imagemin(
-          [
-            imagemin.gifsicle({ interlaced: true }),
-            imagemin.jpegtran({ progressive: true }),
-            imageminJpegRecompress({
-              loops: 5,
-              min: 65,
-              max: 70,
-              quality: "medium"
-            }),
-            imagemin.svgo(),
-            imagemin.optipng({ optimizationLevel: 3 }),
-            pngquant({ quality: "65-70", speed: 5 })
-          ],
-          {
-            verbose: true
-          }
-        )
-      )
-    )
-    .pipe(gulp.dest("docs/imgs"));
+  return (
+    gulp
+      .src("./src/imgs/**/*.*")
+      // .pipe(
+      //   cache(
+      //     imagemin(
+      //       [
+      //         imagemin.gifsicle({ interlaced: true }),
+      //         imagemin.jpegtran({ progressive: true }),
+      //         imageminJpegRecompress({
+      //           loops: 5,
+      //           min: 65,
+      //           max: 70,
+      //           quality: "medium"
+      //         }),
+      //         imagemin.svgo(),
+      //         imagemin.optipng({ optimizationLevel: 3 }),
+      //         pngquant({ quality: "65-70", speed: 5 })
+      //       ],
+      //       {
+      //         verbose: true
+      //       }
+      //     )
+      //   )
+      // )
+      .pipe(gulp.dest("docs/imgs"))
+  );
 });
 
 // Clearing the cache
