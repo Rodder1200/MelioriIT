@@ -2,8 +2,6 @@
 	font-size: 14px;
 	color: #abb1b7;
 	font-weight: 700;
-	margin: $marginMain;
-	width: $windowWidth;
 	padding: 20px 10px;
 }
 .categories {
@@ -16,8 +14,6 @@
 		background-size: cover;
 		overflow: hidden;
 	.categories__title{
-		margin: $marginMain;
-		width: $windowWidth;
 		padding: 30px 10px;
 		color: #fff;
 			&-h{
@@ -30,8 +26,6 @@
 		}
 	}
 	&__circles{
-		margin: $marginMain;
-		width: $windowWidth;
 		&-item{
 			display: -webkit-box;
 			display: -ms-flexbox;

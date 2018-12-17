@@ -3,26 +3,8 @@
 
 @import "global/_vars";
 @import "global/_fonts";
+@import "global/_wrap";
+@import "global/_base";
 
 @import "sections/_categories";
-
-* {
-  margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-img {
-  height: auto;
-  max-width: 100%;
-}
-a{
-	color: inherit;
-	text-decoration: none;
-}
-.header{
-	margin: 20px 0;
-	text-align: center;
-}
-.wrap__hidden{
-	display: none;
-}
+@import "sections/_methods";

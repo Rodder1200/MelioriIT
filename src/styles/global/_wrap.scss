@@ -1,0 +1,18 @@
+.wrap {
+  width: 300px;
+  margin: 0 auto;
+	color: white;
+
+	@media screen and (min-width: 768px) {
+		width: 66%;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 60%;
+		max-width: 1122px;
+	}
+	
+	&__hidden{
+		display: none;
+	}
+}

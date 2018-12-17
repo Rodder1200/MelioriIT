@@ -49,7 +49,7 @@ gulp.task("styles:compile", function() {
 gulp.task("js", function() {
   return gulp
     .src([
-      // "src/js/_init.js",
+      "src/js/motus.js",
       "src/js/index.js"
     ])
     .pipe(srcmaps.init())
