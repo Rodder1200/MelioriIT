@@ -5,15 +5,11 @@
   100% {
     transform: translateX(calc(100vw - 550px));
   }
-  // 0% {
-  //   transform: translateX(calc(100vw - 550px));
-  // }
 }
 
 .animate-circle {
   transform: translateX(calc(100vw - 550px));
   transition: transform 5s;
-  // animation: move_circle 5s;
 }
 
 .methods {
@@ -23,7 +19,6 @@
   &__circle {
     position: absolute;
     top: 30%;
-    // left: 3%;
     width: 428px;
     height: 429px;
     background: url(../../imgs/methods/circle.png) no-repeat;
@@ -49,8 +44,8 @@
   &__main-wrap {
     display: grid;
     position: relative;
-		z-index: 2;
-		height: 500px;
+    z-index: 2;
+    height: 500px;
     clear: both;
     justify-content: end;
     grid-template-columns: repeat(3, 1fr);
@@ -59,14 +54,11 @@
     align-items: end;
   }
 
-  &__items-wrap {
-  }
-
   &__item {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     align-self: stretch;
     text-align: center;
     padding: 10px;
@@ -77,26 +69,34 @@
     &:hover {
       cursor: pointer;
       border: none;
-      margin-top: -30px;
-      padding-top: 40px;
-      // background: url(../../imgs/methods/method_hover1_1.svg) 50% 0%,
-      //   url(../../imgs/methods/method_hover1_2.svg) 50% 0%,
-      //   url(../../imgs/methods/method_hover1_3.svg) 50% 0%;
-      background: url(../../imgs/methods/method_hover1_waves.svg) 50% 0%;
-      background-repeat: no-repeat;
-      background-size: 100%;
+      padding: 0;
+      .methods__item-title {
+        display: block;
+        height: 140%;
+        width: 100%;
+        margin-top: -30px;
+        padding-top: 60px;
+        background: url(../../imgs/methods/method_hover1_waves.svg) 100% / cover;
+        background-repeat: no-repeat;
+      }
     }
     &:active {
       grid-area: auto / auto / span 2;
-      background: url(../../imgs/methods/method_hover1_waves.svg) 50% 0%,
-        url(../../imgs/methods/method_hover_bg1.svg) 50% 200% / 100% 80.3%;
-      background-repeat: no-repeat;
+      background: none;
+      .methods__item-title {
+        display: block;
+        height: 55%;
+        background: url(../../imgs/methods/method_hover1_waves.svg);
+        background-repeat: no-repeat;
+      }
       .methods__item-text {
         display: block;
+        height: 60%;
+        padding: 10px;
+        background: url(../../imgs/methods/method_hover_bg1.svg);
+        overflow: hidden;
       }
     }
-  }
-  &__item-title {
   }
   &__item-text {
     display: none;
