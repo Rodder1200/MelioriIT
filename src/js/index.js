@@ -1,5 +1,3 @@
-
-
 // $(document).ready(function() {
 //   $(".methods").on("scroll", function(e) {
 //     $(".methods__circle").animate({
@@ -13,23 +11,26 @@
 //   // });
 // });
 
+var windowWidth = window.innerWidth;
+var windowHeight = window.innerHeight;
+
 var customStartPointAnimation = new Motus.Animation(
-	new Motus.Point(document.querySelector(".mathods__main-wrap")), // start point DOM element
-	new Motus.Point(document.querySelector(".fast-order")), // end point DOM element
-	document.querySelector(".methods__circle"), // element that will animated
-	{
-			// 0:{
-			// 	marginLeft: "10px"
-			// },
-			50: {
-				marginLeft: "10px"
-			},
-			65: {
-				marginLeft: "300px"
-			},
-			78: {
-				marginTop: "400px"
-			}
-	}
+  new Motus.Point(document.querySelector(".mathods__main-wrap")), // start point DOM element
+  new Motus.Point(document.querySelector(".fast-order")), // end point DOM element
+  document.querySelector(".methods__circle"), // element that will animated
+  {
+    // 0:{
+    // 	marginLeft: "10px"
+    // },
+    30: {
+      marginLeft: "100px"
+    },
+    70: {
+      marginLeft: windowWidth - 500 + "px"
+    },
+    85: {
+      marginTop: windowHeight - 500 + "px"
+    }
+  }
 );
 Motus.addAnimation(customStartPointAnimation);

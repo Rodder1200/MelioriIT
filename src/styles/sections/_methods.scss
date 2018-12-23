@@ -1,15 +1,15 @@
-@keyframes move_circle {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(100vw - 550px));
-  }
-}
+// @keyframes move_circle {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   100% {
+//     transform: translateX(calc(100vw - 550px));
+//   }
+// }
 
 .animate-circle {
-  transform: translateX(calc(100vw - 550px));
-  transition: transform 5s;
+  // transform: translateX(calc(100vw - 550px));
+  // transition: all 5s;
 }
 
 .methods {
